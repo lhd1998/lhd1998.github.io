@@ -6,7 +6,7 @@ let extraScore;
 let extraScoreStr = '';
 
 while (isNaN(extraScore)) {
-  extraScoreStr = prompt('请输入分数加成数字', '1').trim();
+  extraScoreStr = 1;
   extraScore = parseInt(extraScoreStr);
 }
 
@@ -1021,9 +1021,9 @@ window.__require = function e(t, n, o) {
           }).union().repeatForever().start()
         }, t.prototype.update = function (e) {
         }, t.prototype.adsButtonFunc2 = function () {
-          window.location.href = "https://636f-codenav-8grj8px727565176-1256524210.tcb.qcloud.la/yupi_wechat.png"
+          window.location.href = "https://mmbiz.qpic.cn/mmbiz_png/NnW8pOsCMzLT7JYibkcQIY5Xnwsz7llyOjViaqVNMfBqxEQpEI9G713eB4XByavOI7jc9ogGIUoaich0SCL3yYmEw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1"
         }, t.prototype.bannerButtonFunc = function () {
-          window.location.href = "https://636f-codenav-8grj8px727565176-1256524210.tcb.qcloud.la/yupi_wechat.png"
+          window.location.href = "https://mmbiz.qpic.cn/mmbiz_png/NnW8pOsCMzLT7JYibkcQIY5Xnwsz7llyOjViaqVNMfBqxEQpEI9G713eB4XByavOI7jc9ogGIUoaich0SCL3yYmEw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1"
         }, t.prototype.ShowFailedUi = function (e, t) {
           var n = this;
           this.scheduleOnce(function () {
@@ -1980,7 +1980,7 @@ window.__require = function e(t, n, o) {
         }, t.prototype.update = function (e) {
           this.UpdateScoreLabel(e), this.lerpCtrl && this.lerpNumFunc(this.passlevelYQ), this.levelPanel.children[1].getComponent(cc.Label).string = s.default.Instance.GetLevel().toString()
         }, t.prototype.adsButtonFunc = function () {
-          window.location.href = "https://636f-codenav-8grj8px727565176-1256524210.tcb.qcloud.la/yupi_wechat.png";
+          window.location.href = "https://mmbiz.qpic.cn/mmbiz_png/NnW8pOsCMzLT7JYibkcQIY5Xnwsz7llyOjViaqVNMfBqxEQpEI9G713eB4XByavOI7jc9ogGIUoaich0SCL3yYmEw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1";
         }, t.prototype.TestPasslevel = function () {
           var e = this;
           this.lerpCtrl = !0, this.nowYQ >= this.passlevelYQ && (this.levelPanel.children[2].runAction(cc.sequence(cc.delayTime(1.3), cc.callFunc(function () {
