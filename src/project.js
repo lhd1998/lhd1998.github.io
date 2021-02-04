@@ -3,10 +3,11 @@
  * @type {number}
  */
 let extraScore;
+// let extraScoreStr = '';
 let extraScoreStr = 1;
 
 while (isNaN(extraScore)) {
-
+  // extraScoreStr = prompt('请输入分数加成数字', '1').trim();
   extraScore = parseInt(extraScoreStr);
 }
 
