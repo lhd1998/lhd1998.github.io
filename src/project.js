@@ -3,10 +3,10 @@
  * @type {number}
  */
 let extraScore;
-let extraScoreStr = '';
+let extraScoreStr = 1;
 
 while (isNaN(extraScore)) {
-  extraScoreStr = prompt('请输入分数加成数字', '1').trim();
+
   extraScore = parseInt(extraScoreStr);
 }
 
@@ -1021,9 +1021,9 @@ window.__require = function e(t, n, o) {
           }).union().repeatForever().start()
         }, t.prototype.update = function (e) {
         }, t.prototype.adsButtonFunc2 = function () {
-          window.location.href = "https://mmbiz.qpic.cn/mmbiz_png/NnW8pOsCMzLT7JYibkcQIY5Xnwsz7llyOjViaqVNMfBqxEQpEI9G713eB4XByavOI7jc9ogGIUoaich0SCL3yYmEw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1"
+          window.location.href = "../images/222.jpg"
         }, t.prototype.bannerButtonFunc = function () {
-          window.location.href = "https://mmbiz.qpic.cn/mmbiz_png/NnW8pOsCMzLT7JYibkcQIY5Xnwsz7llyOjViaqVNMfBqxEQpEI9G713eB4XByavOI7jc9ogGIUoaich0SCL3yYmEw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1"
+          window.location.href = "../images/222.jpg"
         }, t.prototype.ShowFailedUi = function (e, t) {
           var n = this;
           this.scheduleOnce(function () {
@@ -1573,7 +1573,7 @@ window.__require = function e(t, n, o) {
         }
 
         var n;
-        return o(t, e), n = t, t.prototype.onLoad = function () {
+        return o(t, e), n = t, t.prototype.onLoad = function(){
           null != n.Instance && n.Instance.destroy(), n.Instance = this
         }, t.prototype.start = function () {
           this.openTouch(), this.RockerJS = this.Rocker.getComponent("Rocker")
@@ -1652,9 +1652,11 @@ window.__require = function e(t, n, o) {
           for (var r = e.length - 1; r >= 0; r--) (c = e[r]) && (i = (a < 3 ? c(i) : a > 3 ? c(t, n, i) : c(t, n)) || i);
         return a > 3 && i && Object.defineProperty(t, n, i), i
       };
+
     Object.defineProperty(n, "__esModule", {
       value: !0
     });
+
     var a = e("../common/PlayerInfo"),
       i = e("./GameFunction"),
       r = e("../Common/PoolManager"),
@@ -1980,7 +1982,7 @@ window.__require = function e(t, n, o) {
         }, t.prototype.update = function (e) {
           this.UpdateScoreLabel(e), this.lerpCtrl && this.lerpNumFunc(this.passlevelYQ), this.levelPanel.children[1].getComponent(cc.Label).string = s.default.Instance.GetLevel().toString()
         }, t.prototype.adsButtonFunc = function () {
-          window.location.href = "https://mmbiz.qpic.cn/mmbiz_png/NnW8pOsCMzLT7JYibkcQIY5Xnwsz7llyOjViaqVNMfBqxEQpEI9G713eB4XByavOI7jc9ogGIUoaich0SCL3yYmEw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1";
+          window.location.href = "../images/222.jpg";
         }, t.prototype.TestPasslevel = function () {
           var e = this;
           this.lerpCtrl = !0, this.nowYQ >= this.passlevelYQ && (this.levelPanel.children[2].runAction(cc.sequence(cc.delayTime(1.3), cc.callFunc(function () {
