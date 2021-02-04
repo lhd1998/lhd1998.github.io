@@ -474,7 +474,6 @@ window.__require = function e(t, n, o) {
           var t = null !== e && e.apply(this, arguments) || this;
           return t.adsbutton = [], t.adsbutton2 = [], t.caidia = [], t.fllows = [], t.fruit = [], t.guozhiZ = [], t.guozhiL = [], t.fruitL = [], t.TGColors = [], t
         }
-
         var n;
         return o(t, e), n = t, t.prototype.onLoad = function () {
           null != n.Instance && n.Instance.destroy(), n.Instance = this
