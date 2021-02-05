@@ -11,7 +11,9 @@ window._CCSettings = {
     [false, false, false, false, true, false, false],
     [false, false, false, false, false, false, false, false]
   ],
+  
   rawAssets: {
+
     assets: {
       "0": ["default_btn_pressed.png", 1],
       "5": ["music/success.mp3", 4],
@@ -23,6 +25,7 @@ window._CCSettings = {
       e7ME0lTvlNb4HX93TA0F1d: ["default_btn_pressed", 0, 1],
       "41eopZwPxHZ4viv1Eku0uN": ["panel/LinkIconSpr.prefab", 5]
     },
+
     internal: {
       "1": ["materials/builtin-unlit.mtl", 3],
       "2": ["effects/builtin-unlit.effect", 2],
@@ -38,12 +41,14 @@ window._CCSettings = {
       "ecpdLyjvZBwrvm+cedCcQy": ["materials/builtin-2d-sprite.mtl", 3]
     }
   },
+
   assetTypes: ["cc.SpriteFrame", "cc.Texture2D", "cc.EffectAsset", "cc.Material", "cc.AudioClip", "cc.Prefab"],
   launchScene: "db://assets/Scene/MainGameScene.fire",
   scenes: [{
     url: "db://assets/Scene/MainGameScene.fire",
     uuid: 7
   }],
+
   packedAssets: {
     "049f3a810": ["00/EFfjElOWId9B1zBG65K", "02delMVqdBD70a/HSD99FK", "03wz9VWTJP94lrgUujqO24", "0cuz27KoVCpb4hmDlhHlr3", "13Le2CPjlOLrw0/JNIcPhM", "13e4vXA9xHvpTR79esXQp0", "174oR9KZhO9JbV7v4xE3ww", "18dkD/iU9H+7Ohh04GiPIx", "19CuZYXWREsbpGboXrMGP5", "292nqIZ1xO0KmLyOv5GA30", "2dUWCjA6RPYJNUO053IAix", "3b5V3m3VBNXbaXHmWjKsC2", "3eX+ScAINKMbfp34P/uuqw", "3eeMUvLbxD7ZE7ax/ZB97n", "44gs9IhQtCIbDernVZrrVM", "47VjEbQ2RBYLx+KZh29Jdw", "4bGaeeVWZCqr+ZdexT94qU", "4bvNoenrRPVpT4typ0IiYM", "4eGaGBr25O8Yrca6vsF3PA", "50NSZsjfNCNo2Co3Xpeg2c", "536Onqp61NfbovIGjz5l72", "55B21T8f1A/Zf8OhTKEaEK", "55R3S0ssFFOZeGtOQkAavE", "56S6YgalVMvqWmb6Pt2AFR", "5aqToRvfBCNbhG3e32kRzM", "5fkyBCD0JE+p9H4+pJhQgH", "5foCZNrL9Ke4kjwQbsO5IV", "64NDfStvpAaoE9VodJ4IXS", "66Wg7JbENIWJdMAlUU8qDn", "68JBmQV/xDqr8o7ceMaAj/", "69tmDgTPdFhq8xJ8xIlHuN", "6fjigbVlBLXqH+OXUh1wXQ", "71VhFCTINJM6/Ky3oX9nBT", "74I3BXKIBOH4p4bY7wCh9f", "80BrQDyu9PhJ0Z86rVYNs9", "84vJ1Ag9BIDLRqPvWeYD4U", "85YmfQaJFGYKKKPrEQv2OV", "86jDFivHhMf6inDLIoJwD2", "86o1FnGmRDRqw4ROp3tDhh", "8cUqhRmWlHApmXCiyp9Ddz", "8eXVr1cI5KK5Z9V2W4QR5P", "8eqYAPJy1ElJnU5T1Vme7+", "95Thg4bxZLlIVa4u2r4Kl7", "97Qv+7JBJHvby7AJZ8lD7b", "9e2RrV3HVI97HdMNwpBIlp", "a1/pBfYZhKjaDDJClfhDo7", "a5MTATjQNPt4736UDCJ8xh", "a7mM0lQUVLC7/9Ry9Cl36f", "a73hCZ/6tFC421VLUVFP1U", "a8Anh32NZGRZegUtSgEj26", "a9jxOwyflFwacoRm5yk4u8", "adFszcl15Dk657isecN5Xy", "ae0aol/0JF/aec8JnkneKe", "b03ZhiGzNIV4fzDUXzJfY7", "b1Odi1mLNEHaDvPRc5pU9n", "b3H1GONCxFP4JGDgYZR+Pm", "b4P/PCArtIdIH38t6mlw8Y", "b7kf5xpnlLtrQ0iYcrZFkK", "bbhcqtGR5AtrldfrXaYVA/", "bcssm8oBxAnImERxJEbh8F", "bdWFyvdFFJobLF0Pie0Ma9", "beSMv3mcRKhI9G0SGsi9V1", "c1Xz6l+aBOcLWzVl7eEd8c", "c2HQuONkBIbK+1Y23u1fa4", 0, "cc7MpJSbRMd5fMcB/bbznZ", "d0xnbkCVZKA5Cv/uAoz6vk", "d427JGp29HD4xiQHWNxHj2", "d7dRTX58pMnrD4/mG455OC", "db3w/ze2FJD5VaeYQzbFca", "e36xbamtdCNJlwiRYtcuO/", "e4msy+peJNTJJJTOkm2bmX", "e5J9mN/hBOOan+5gBVTgxD", "e9ROHL+p9Ix5DEwF/vMXb8", "e9yBRNBcRCAbaaFZSgiIsa", "eadLsWqWRFU7BRdOK2gj50", "ebyNd0WWVBbpb4i0TFUlcP", "eb3A6RnrJAtoIRUGGnO7VC", "ffBKvw4z9DIb4QlJDOO2VH", "ffGAgcvZ1IuYRZ9pFs0gwO"],
     "079499991": [1, 2],
@@ -53,6 +58,7 @@ window._CCSettings = {
     "0d669730c": [13, 14],
     "0e4bc3b03": [15, 16]
   },
+
   md5AssetsMap: {},
   orientation: "",
   debug: false,
