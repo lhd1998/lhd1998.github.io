@@ -2116,6 +2116,7 @@ window.__require = function e(t, n, o) {
           e.substring(e.lastIndexOf("//") + 4, e.lastIndexOf("com") + 3);
           // this.moreGameUrl = "http://m.wesane.com/"
           this.moreGameUrl = "https://mp.weixin.qq.com/s/dmBgiWeAuzSZ1-veoeU4mg"
+
         },
         gameOverShowText: function (e, t) {
           this.ajaxLoad("http://www.wesane.com/admin.php/Gamescore/saveGamescore", "gameScore=" + e + "&gameId=" + this.gameHttpId + "&gameType=" + t, this.scoreResult)
