@@ -5,7 +5,7 @@ if (false) {
 
 var loadingBool = true;
 var loadingNum = 0;
-window.boot = function() {
+window.boot = function () {
 
     var settings = window._CCSettings;
     window._CCSettings = undefined;
@@ -63,13 +63,8 @@ window.boot = function() {
     }
 
     function setLoadingDisplay() {
-        // Loading splash scene
         var splash = document.getElementById('splash');
-        // var progressBar = splash.querySelector('.progress-bar span');
-
-
-
-        cc.loader.onProgress = function(completedCount, totalCount, item) {
+        cc.loader.onProgress = function (completedCount, totalCount, item) {
 
             loadData.completedCount = completedCount;
             loadData.totalCount = totalCount;
@@ -81,7 +76,7 @@ window.boot = function() {
             if (loadingBool && loadingNum >= 1 && totalCount > 1) {
                 if (percent.toFixed(0) >= 100) {
                     loadintT.innerHTML = 'loading......100' + '%';
-                    setTimeout(function() {
+                    setTimeout(function () {
                         loadingBool = false;
                         loadintT.remove();
                     }, 0.1 * 1000);
@@ -89,37 +84,14 @@ window.boot = function() {
                 }
             }
             loadingNum++;
-            // if(loadingBool){
-            // 	var loadintT = document.getElementById("loadingText")
-            // }
-            // var percent = 100 * completedCount / totalCount;
-            // if(loadingBool && loadingNum >= 1){
-            // 	   console.log("dskpi",loadingNum);
-            // 	   loadintT.innerHTML = 'loading......' + parseInt(percent)  + '%';
-            // 	   if(percent.toFixed(0) >= 100){
-
-            // 		   loadingBool = false;
-            // 		   loadintT.remove();
-            // 	   }
-            // }
-            // loadingNum ++;
-
-            // var percent = 100 * completedCount / totalCount;
-            // if (progressBar) {
-            // progressBar.style.width = percent.toFixed(2) + '%';
-            // }
-
-
         };
         splash.style.display = 'block';
-        // progressBar.style.width = '0%';
-
-        cc.director.once(cc.Director.EVENT_AFTER_SCENE_LAUNCH, function() {
+        cc.director.once(cc.Director.EVENT_AFTER_SCENE_LAUNCH, function () {
             splash.style.display = 'none';
         });
     }
 
-    var onStart = function() {
+    var onStart = function () {
 
         cc.loader.downloader._subpackages = settings.subpackages;
 
@@ -138,47 +110,14 @@ window.boot = function() {
                 } else if (settings.orientation === 'portrait') {
                     cc.view.setOrientation(cc.macro.ORIENTATION_PORTRAIT);
                 }
-                // cc.view.enableAutoFullScreen([
-                //     cc.sys.BROWSER_TYPE_BAIDU,
-                //     cc.sys.BROWSER_TYPE_WECHAT,
-                //     cc.sys.BROWSER_TYPE_MOBILE_QQ,
-                //     cc.sys.BROWSER_TYPE_MIUI,
-                // ].indexOf(cc.sys.browserType) < 0);
                 cc.view.enableAutoFullScreen(false);
             }
-
-            // Limit downloading max concurrent task to 2,
-            // more tasks simultaneously may cause performance draw back on some android system / browsers.
-            // You can adjust the number based on your own test result, you have to set it before any loading process to take effect.
             if (cc.sys.isBrowser && cc.sys.os === cc.sys.OS_ANDROID) {
                 cc.macro.DOWNLOAD_MAX_CONCURRENT = 2;
             }
         }
 
-        // function loadScene(launchScene) {
-        // cc.director.loadScene(launchScene, null,
-        // function () {
-        // if (cc.sys.isBrowser) {
-        // // show canvas
-        // var canvas = document.getElementById('GameCanvas');
-        // canvas.style.visibility = '';
-        // var div = document.getElementById('GameDiv');
-        // if (div) {
-        // div.style.backgroundImage = '';
-        // }
-        // }
-        // cc.loader.onProgress = null;
-        // console.log('Success to load scene: ' + launchScene);
-        // }
-        // );
-
-        // }
-
         var launchScene = settings.launchScene;
-
-        // load scene
-        // loadScene(launchScene);
-
         var canvas;
 
         if (cc.sys.isBrowser) {
@@ -188,15 +127,8 @@ window.boot = function() {
         console.log("landscape,", launchScene);
         var MainManger = __require("MainManage");
         MainManger.init(launchScene, cc.sys.isBrowser, canvas.style.visibility);
-
-
-
-
-
-
     };
 
-    // jsList
     var jsList = settings.jsList;
 
     if (false) {
@@ -204,7 +136,7 @@ window.boot = function() {
     } else {
         var bundledScript = settings.debug ? 'src/project.dev.js' : 'src/project.js';
         if (jsList) {
-            jsList = jsList.map(function(x) {
+            jsList = jsList.map(function (x) {
                 return 'src/' + x;
             });
             jsList.push(bundledScript);
@@ -223,7 +155,6 @@ window.boot = function() {
         groupList: settings.groupList,
         collisionMatrix: settings.collisionMatrix,
     }
-
     // init assets
     cc.AssetLibrary.init({
         libraryPath: 'res/import',
@@ -237,7 +168,6 @@ window.boot = function() {
     cc.game.run(option, onStart);
 };
 
-// main.js is qqplay and jsb platform entry file, so we must leave platform init code here
 if (false) {
     BK.Script.loadlib('GameRes://src/settings.js');
     BK.Script.loadlib();
@@ -250,7 +180,7 @@ if (false) {
     };
     BK.Director.screenMode = ORIENTATIONS[window._CCSettings.orientation];
     initAdapter();
-    cc.game.once(cc.game.EVENT_ENGINE_INITED, function() {
+    cc.game.once(cc.game.EVENT_ENGINE_INITED, function () {
         initRendererAdapter();
     });
 
@@ -260,7 +190,6 @@ if (false) {
 
     window.boot();
 } else if (window.jsb) {
-
     var isRuntime = (typeof loadRuntime === 'function');
     if (isRuntime) {
         require('src/settings.js');

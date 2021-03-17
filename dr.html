@@ -17,7 +17,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="想和你一起呼呼">
     <meta name="msapplication-TileColor" content="#3372DF">
-
     <link rel="stylesheet" href="./huhucss/a.css">
     <link rel="stylesheet" href="./huhucss/b.css">
     <link rel="stylesheet" href="./huhucss/c.css">
@@ -33,23 +32,19 @@
             margin-bottom: 40px;
             z-index: 900;
         }
-
         a {
             text-decoration: none
         }
-
         .img-responsive {
             display: block;
             height: auto;
             max-width: 100%;
         }
-
         .panel-body:not(:nth-child(2)) {
             display: none;
         }
     </style>
 </head>
-
 <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
     <div class="mdl-layout__container has-scrolling-header">
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header is-small-screen has-tabs is-upgraded"
@@ -57,16 +52,16 @@
             <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--pink-600">
 
                 <div class="mdl-layout--large-screen-only mdl-layout__header-row" style="margin:30px">
-                    <h3>随机文案</h3>
+                    <h3>公众号：想和你一起呼呼</h3>
                 </div>
                 <div class="mdl-layout__tab-bar-container">
                     <div class="mdl-layout__tab-bar-button mdl-layout__tab-bar-left-button"><i
                             class="material-icons">chevron_left</i></div>
                     <div class="mdl-layout__tab-bar mdl-color--pink">
-                        <a href="./index.html" class=" mdl-layout__tab is-active">诺基亚</a>
+                        <a href="./index.html" class=" mdl-layout__tab ">诺基亚</a>
                         <a href="./pyq.html" class=" mdl-layout__tab " style="text-transform: inherit">朋友圈文案</a>
-                        <a href="./chp.html" class=" mdl-layout__tab" style="text-transform: inherit">彩虹屁文案</a>
-                        <a href="./dr.html" class=" mdl-layout__tab" style="text-transform: inherit">怼人文案</a>
+                        <a href="./chp.html" class=" mdl-layout__tab " style="text-transform: inherit">彩虹屁文案</a>
+                        <a href="./dr.html" class=" mdl-layout__tab is-active" style="text-transform: inherit">怼人文案</a>
                     </div>
                     <div class="mdl-layout__tab-bar-button mdl-layout__tab-bar-right-button"><i
                             class="material-icons">chevron_right</i></div>
@@ -98,7 +93,7 @@
                     </section>
                 </div>
             </main>
-            <main style="display: block;" class="aaa mdl-layout__content">
+            <main style="display: none;" class="aaa mdl-layout__content">
                 <html lang="zh_CN" dir="">
 
                 <head>
@@ -147,12 +142,12 @@
                                 <img src="./images/save.png" alt="">
                                 <div>保存</div>
                             </div>
-                            <!-- <div class="item">
-                                <a style="text-decoration: none;" href="./.html">
+                            <div class="item">
+                                <a style="text-decoration: none;" href="./huhu.html">
                                     <img src="./images/caihong.png" alt="">
                                     <div style="color: #000000;">彩虹屁</div>
                                 </a>
-                            </div> -->
+                            </div>
                             <div id="nav1" class="item">
                                 <img src="./images/xq.png" alt="星球去水印">
                                 <div>去水印</div>
@@ -250,7 +245,7 @@
                     </section>
                 </div>
             </main>
-            <main style="display: none;" class="aaa mdl-layout__content">
+            <main style="display: block;" class="aaa mdl-layout__content">
                 <div class="mdl-layout__tab-panel is-active" id="index">
                     <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                         <div class="mdl-card mdl-cell mdl-cell--12-col" style="height:200px">
@@ -279,7 +274,5 @@
         </div>
     </div>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-
 </body>
-
 </html>
