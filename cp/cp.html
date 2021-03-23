@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>月球情侣船票</title>
+    <link type="text/css" rel="stylesheet" href="./css/1.css">
+    <style>
+        .ui-header-positive,
+        .ui-footer-positive {
+            background-color: #f05557;
+            color: #fff;
+        }
+
+        a {
+            color: #f05557;
+        }
+    </style>
+
+</head>
+
+<body ontouchstart="">
+    <header class="ui-header ui-header-positive ui-border-b">
+        <h1>这是一张带你和TA去月球的船票</h1>
+    </header>
+    <div class="wrapper" style="position: relative;top: 45px;">
+        <img src="http://ceshi.jilijil.cn/assets/huoxing/first111.jpg" width="100%">
+        <div class="ui-form" style=" margin-top: 10px; padding-bottom:10px">
+            <p style=" padding: 15px; color:#666">“ 爱意或许会东升西落 但浪漫将在宇宙中心至死不渝 ”</p>
+            <form id="form" action='./cp_cp.html'>
+                <div class="ui-form-item " style="display: flex;">
+                    <label for="#">你的姓名：</label>
+                    <input id=name1 type="text" name="name1" placeholder="请输入你的姓名">
+                </div>
+                <div class="ui-form-item " style="display: flex;">
+                    <label for="#">Ta的姓名：</label>
+                    <input id=name2 type="text" name="name2" placeholder="请输入对方的姓名">
+                </div>
+                <input id="button" style=' width: 60% !important;
+                margin:10px auto auto auto !important; background-color: #f75549;
+                background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.5,#fc6156),to(#f75549));
+                color: #fff;
+                border-color: #f43d30;
+                -webkit-background-clip: padding-box;
+                background-clip: padding-box;' type="submit" class="ui-btn-lg" placeholder='提交' >
+            </form>
+        </div>
+    </div>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script>
+          $(document).ready(function () {
+                $("#button").click(function () {
+                    var name1 = $("#name1").val();
+                    var name2 = $("name2").val();
+                    console.log(name1)
+                    if (name1==''||name2=='') {
+                        alert("请输入完整再提交");
+                        return false
+                    }
+                })
+            })
+            
+    </script>
+</body>
+
+</html>
