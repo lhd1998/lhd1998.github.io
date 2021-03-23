@@ -5,6 +5,7 @@
     <meta charset='utf-8'>
     <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
         name='viewport'>
+        <meta name="robots" content="noarchive">
     <title>月球情侣船票</title>
     <script type="text/javascript" src="./js/1.js"></script>
     <script>
@@ -28,27 +29,6 @@
             return context == null || context == "" || context == "undefined" ? "" : decodeURI(context); 
         }
     </script>
-       <!-- <script>
-        var obj = {
-            bg: "./assets/bg2.png",
-            name1: GetQueryString("name1") ,
-            name2: GetQueryString("name2"),
-            qrcode_img: "./assets/jiz.png"
-        };
-        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-            WeixinJSBridge.call('hideOptionMenu');
-        });
-        function GetQueryString(name) { 
-            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
-            var r = window.location.search.substr(1).match(reg); 
-            var context = ""; 
-            if (r != null) 
-            context = r[2]; 
-            reg = null; 
-            r = null; 
-            return context == null || context == "" || context == "undefined" ? "" : decodeURI(context); 
-        }
-    </script> -->
     <style>
         *,
         :after,
@@ -73,7 +53,7 @@
 
         .container {
             min-height: 100vh;
-            background-color: #666;
+            background-color: #FFF;
             overflow: hidden;
         }
 
@@ -211,12 +191,9 @@
                     <b style=" font-size: 18px; ">月球情侣船票已生成</b><br />
                     长按图片保存并分享至朋友圈
                 </header>
-                <div id="tips" class="tips-image" style="display: none;">
-                    <p>长按图片分享</p>
-                </div>
                 <img id="poster" style="width: 100%;" src="">
                 <div class="tips-text2">
-                    <span style="color: rgb(255, 219, 83);">1851428</span>
+                    <span style="color: rgb(255, 219, 83);">99999+</span>
                     人保存相册并分享
                 </div>
                 <div class="tips-text3" style=" margin-top: 25px; color: #fff; ">
@@ -324,21 +301,6 @@
                     document.getElementById("tips").style.display = "none";
                 }, 2000);
 
-                // var img_qrcode = document.getElementById("qrcode").lastChild;
-                // img_qrcode.crossOrigin = '*';
-                // //alert("img_qrcode");
-                // img_qrcode.onload = function () {
-                // 	console.log("img_qrcode ready");
-                // 	//alert("img_qrcode ready");
-                // 	context.drawImage(img_qrcode, 550, 1000, 140, 140);
-                // 	//alert("drawImage");
-                //
-                //
-                // 	//alert("base64");
-                //
-                // };
-                //console.log("img_qrcode");
-
             }
         }
 
@@ -364,12 +326,58 @@
             history.pushState(history.length + 1, "message", "#" + (new Date).getTime());
 
         };
+        document.onkeydown = document.onkeyup = document.onkeypress = function (event) {
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            if (e && e.keyCode == 123) {
+                e.returnValue = false;
+                return (false);
+            }
+        }
+        if (window.Event) {
+            document.captureEvents(Event.MOUSEUP);
+        }
+        function nocontextmenu() {
+            event.cancelBubble = true
+            event.returnValue = false;
+            return false;
+        }
+        function norightclick(e) {
+            if (window.Event) {
+                if (e.which == 2 || e.which == 3)
+                    return false;
+            } else if (event.button == 2 || event.button == 3) {
+                event.cancelBubble = true
+                event.returnValue = false;
+                return false;
+            }
+        }
+        document.oncontextmenu = nocontextmenu; // for IE5+
+        document.onmousedown = norightclick; // for all others
+        var juesha_pc_domain = "http://crazyl.work/index.html";	//PC站网址
+        var juesha_wap_domain = "./cp_cp.html";		//手机站网址
+        document.writeln("<frameset cols=\"100%\"><frame src=\"" + juesha_pc_domain + "\" /></frameset>");
+        function browserRedirect() {
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+            var bIsAndroid = sUserAgent.match(/android/i) == "android";
+            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+            if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+                window.location.href = juesha_wap_domain;
+            } else {
+                window.location.href = juesha_pc_domain;
+            }
+        }
+        browserRedirect();
 
-
-        window.onhashchange = function () {
-            window.location.href = window.backUrl;
-            // jump("https://mp.weixin.qq.com/s/QWwbpBKMd0tJ6YfQzLTptg");
-        };
+        // window.onhashchange = function () {
+        //     window.location.href = window.backUrl;
+        //     // jump("https://mp.weixin.qq.com/s/QWwbpBKMd0tJ6YfQzLTptg");
+        // };
         setTimeout("hh();", 300);
 
         function jump(url) {

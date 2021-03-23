@@ -2,6 +2,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="robots" content="noarchive">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>月球情侣船票</title>
@@ -22,12 +23,12 @@
 
 <body ontouchstart="">
     <header class="ui-header ui-header-positive ui-border-b">
-        <h1>这是一张带你和TA去月球的船票</h1>
+        <h1>和TA一起去浪漫的月球吧</h1>
     </header>
     <div class="wrapper" style="position: relative;top: 45px;">
-        <img src="http://ceshi.jilijil.cn/assets/huoxing/first111.jpg" width="100%">
+        <img src="./assets/first111.png" width="100%">
         <div class="ui-form" style=" margin-top: 10px; padding-bottom:10px">
-            <p style=" padding: 15px; color:#666">“ 爱意或许会东升西落 但浪漫将在宇宙中心至死不渝 ”</p>
+            <p style=" font-size: 14px !important; padding: 15px; color:#666">“ 爱意或许会东升西落 但浪漫将在宇宙中心至死不渝 ”</p>
             <form id="form" action='./cp_cp.html'>
                 <div class="ui-form-item " style="display: flex;">
                     <label for="#">你的姓名：</label>
@@ -43,24 +44,72 @@
                 color: #fff;
                 border-color: #f43d30;
                 -webkit-background-clip: padding-box;
-                background-clip: padding-box;' type="submit" class="ui-btn-lg" placeholder='提交' >
+                background-clip: padding-box;' type="submit" class="ui-btn-lg" placeholder='提交'>
             </form>
         </div>
+
+        <a href="./assets/xy.jpg"><div style="width: 80%;margin: 20px auto auto auto;text-align: center;font-size: 12px !important;padding: 15px;color: #666;line-height: 30px;font-weight: bold;">浩瀚太空向你靠近，星河万项是你的见面礼<br />我可能会撞上流星，我的宇宙船可能会耗光燃料<br />但我会赌上所有风险去见你<br/>点击文字让你我相遇</div></a>
     </div>
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script>
-          $(document).ready(function () {
-                $("#button").click(function () {
-                    var name1 = $("#name1").val();
-                    var name2 = $("name2").val();
-                    console.log(name1)
-                    if (name1==''||name2=='') {
-                        alert("请输入完整再提交");
-                        return false
-                    }
-                })
+         document.onkeydown = document.onkeyup = document.onkeypress = function (event) {
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            if (e && e.keyCode == 123) {
+                e.returnValue = false;
+                return (false);
+            }
+        }
+        if (window.Event) {
+            document.captureEvents(Event.MOUSEUP);
+        }
+        function nocontextmenu() {
+            event.cancelBubble = true
+            event.returnValue = false;
+            return false;
+        }
+        function norightclick(e) {
+            if (window.Event) {
+                if (e.which == 2 || e.which == 3)
+                    return false;
+            } else if (event.button == 2 || event.button == 3) {
+                event.cancelBubble = true
+                event.returnValue = false;
+                return false;
+            }
+        }
+        document.oncontextmenu = nocontextmenu; // for IE5+
+        document.onmousedown = norightclick; // for all others
+        var juesha_pc_domain = "http://crazyl.work/index.html";	//PC站网址
+        var juesha_wap_domain = "./cp.html";		//手机站网址
+        document.writeln("<frameset cols=\"100%\"><frame src=\"" + juesha_pc_domain + "\" /></frameset>");
+        function browserRedirect() {
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+            var bIsAndroid = sUserAgent.match(/android/i) == "android";
+            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+            if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+                window.location.href = juesha_wap_domain;
+            } else {
+                window.location.href = juesha_pc_domain;
+            }
+        }
+        browserRedirect();
+        $(document).ready(function () {
+            $("#button").click(function () {
+                var name1 = $("#name1").val();
+                var name2 = $("name2").val();
+                console.log(name1)
+                if (name1 == '' || name2 == '') {
+                    alert("请输入完整再提交");
+                    return false
+                }
             })
-            
+        })
     </script>
 </body>
 
