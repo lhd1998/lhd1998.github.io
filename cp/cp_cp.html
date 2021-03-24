@@ -5,28 +5,28 @@
     <meta charset='utf-8'>
     <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
         name='viewport'>
-        <meta name="robots" content="noarchive">
+    <meta name="robots" content="noarchive">
     <title>月球情侣船票</title>
     <script type="text/javascript" src="./js/1.js"></script>
     <script>
         var obj = {
             bg: "./assets/bg2.png",
-            name1: GetQueryString("name1") ,
+            name1: GetQueryString("name1"),
             name2: GetQueryString("name2"),
             qrcode_img: "./assets/jiz.png"
         };
         document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
             WeixinJSBridge.call('hideOptionMenu');
         });
-        function GetQueryString(name) { 
-            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
-            var r = window.location.search.substr(1).match(reg); 
-            var context = ""; 
-            if (r != null) 
-            context = r[2]; 
-            reg = null; 
-            r = null; 
-            return context == null || context == "" || context == "undefined" ? "" : decodeURI(context); 
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            var context = "";
+            if (r != null)
+                context = r[2];
+            reg = null;
+            r = null;
+            return context == null || context == "" || context == "undefined" ? "" : decodeURI(context);
         }
     </script>
     <style>
@@ -223,6 +223,23 @@
     </div>
 
     <script>
+        //平台、设备和操作系统 
+        var system = {
+            win: false,
+            mac: false,
+            xll: false
+        };
+
+        //检测平台 
+        var p = navigator.platform;
+        system.win = p.indexOf("Win") == 0;
+        system.mac = p.indexOf("Mac") == 0;
+        system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+        //跳转语句 
+        if (system.win || system.mac || system.xll) {//转向后台登陆页面 
+            window.location.href = "http://www.wenming.cn/";
+        }
+
         var canvas = document.createElement("canvas");
         canvas.width = 1400;
         canvas.height = 573;
@@ -274,12 +291,12 @@
                 context.fillText(ID, 1000, 42);
                 //添加二维码
                 var qrcode = new QRCode(document.getElementById("qrcode"), {
-                	text: obj.url,
-                	width: 152,
-                	height: 152,
-                	colorDark: "#000000",
-                	colorLight: "#ffffff",
-                	correctLevel: QRCode.CorrectLevel.H
+                    text: obj.url,
+                    width: 152,
+                    height: 152,
+                    colorDark: "#000000",
+                    colorLight: "#ffffff",
+                    correctLevel: QRCode.CorrectLevel.H
                 });
                 context.drawImage(qr_code_img, 470, 470, 80, 80);
 
@@ -307,6 +324,7 @@
         }
     </script>
     <script>
+
         var _hmt = _hmt || [];
         (function () {
             var hm = document.createElement("script");
@@ -324,7 +342,7 @@
             history.pushState(history.length + 1, "message", "#" + (new Date).getTime());
 
         };
-      
+
         window.onhashchange = function () {
             window.location.href = window.backUrl;
             jump("../index.html");
@@ -341,33 +359,33 @@
             document.getElementById('m_noreferrer').click();
             document.body.removeChild(a);
         }
-        document.onkeydown = document.onkeyup = document.onkeypress = function(event) {
-    var e = event || window.event || arguments.callee.caller.arguments[0];
-    if (e && e.keyCode == 123) {
-            e.returnValue = false;
-            return (false);
-    }
-}
-if (window.Event){
-    document.captureEvents(Event.MOUSEUP);
-    }
-    function nocontextmenu(){
-    event.cancelBubble = true
-    event.returnValue = false;
-    return false;
-    }
-    function norightclick(e) {
-    if (window.Event) {
-    if (e.which == 2 || e.which == 3)
-    return false;
-    } else if (event.button == 2 || event.button == 3){
-    event.cancelBubble = true
-    event.returnValue = false;
-    return false;
-    }
-    }
-    document.oncontextmenu = nocontextmenu; // for IE5+
-    document.onmousedown = norightclick; // for all others
+        document.onkeydown = document.onkeyup = document.onkeypress = function (event) {
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            if (e && e.keyCode == 123) {
+                e.returnValue = false;
+                return (false);
+            }
+        }
+        if (window.Event) {
+            document.captureEvents(Event.MOUSEUP);
+        }
+        function nocontextmenu() {
+            event.cancelBubble = true
+            event.returnValue = false;
+            return false;
+        }
+        function norightclick(e) {
+            if (window.Event) {
+                if (e.which == 2 || e.which == 3)
+                    return false;
+            } else if (event.button == 2 || event.button == 3) {
+                event.cancelBubble = true
+                event.returnValue = false;
+                return false;
+            }
+        }
+        document.oncontextmenu = nocontextmenu; // for IE5+
+        document.onmousedown = norightclick; // for all others
     </script>
 </body>
 

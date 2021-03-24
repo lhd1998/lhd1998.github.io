@@ -28,7 +28,8 @@
     <div class="wrapper" style="position: relative;top: 45px;">
         <img src="./assets/first111.png" width="100%">
         <div class="ui-form" style=" margin-top: 10px; padding-bottom:10px">
-            <p style=" font-size: 14px !important;margin-top: 15px;text-align: center; color:#666">“ 爱意或许会东升西落 但浪漫将在宇宙中心至死不渝 ”</p>
+            <p style=" font-size: 14px !important;margin-top: 15px;text-align: center; color:#666">“ 爱意或许会东升西落
+                但浪漫将在宇宙中心至死不渝 ”</p>
             <form id="form" action='./cp_cp.html'>
                 <div class="ui-form-item " style="display: flex;">
                     <label for="#">你的姓名：</label>
@@ -47,39 +48,61 @@
                 background-clip: padding-box;' type="submit" class="ui-btn-lg" placeholder='提交'>
             </form>
         </div>
-        <a href="./assets/xy.jpg"><div style="width: 80%;margin: 20px auto auto auto;text-align: center;font-size: 12px !important;padding: 15px;color: #000000;line-height: 30px;font-weight: bold;">浩瀚太空向你靠近，星河万项是你的见面礼<br />我可能会撞上流星，我的宇宙船可能会耗光燃料<br />但我会赌上所有风险去见你<br/><span style="color: #0188FB;">联系我♥</span></div></a>
+        <a href="./assets/xy.jpg">
+            <div
+                style="width: 80%;margin: 20px auto auto auto;text-align: center;font-size: 12px !important;padding: 15px;color: #000000;line-height: 30px;font-weight: bold;">
+                浩瀚太空向你靠近，星河万项是你的见面礼<br />我可能会撞上流星，我的宇宙船可能会耗光燃料<br />但我会赌上所有风险去见你<br /><span
+                    style="color: #0188FB;">联系我♥</span></div>
+        </a>
     </div>
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script>
- 
 
-      document.onkeydown = document.onkeyup = document.onkeypress = function(event) {
-    var e = event || window.event || arguments.callee.caller.arguments[0];
-    if (e && e.keyCode == 123) {
-            e.returnValue = false;
-            return (false);
-    }
-}
-if (window.Event){
-    document.captureEvents(Event.MOUSEUP);
-    }
-    function nocontextmenu(){
-    event.cancelBubble = true
-    event.returnValue = false;
-    return false;
-    }
-    function norightclick(e) {
-    if (window.Event) {
-    if (e.which == 2 || e.which == 3)
-    return false;
-    } else if (event.button == 2 || event.button == 3){
-    event.cancelBubble = true
-    event.returnValue = false;
-    return false;
-    }
-    }
-    document.oncontextmenu = nocontextmenu; // for IE5+
-    document.onmousedown = norightclick; // for all others
+          //平台、设备和操作系统 
+          var system ={ 
+                        win : false, 
+                        mac : false, 
+                        xll : false 
+                    };
+                
+                    //检测平台 
+                    var p = navigator.platform; 
+                    system.win = p.indexOf("Win") == 0; 
+                    system.mac = p.indexOf("Mac") == 0; 
+                    system.x11 = (p == "X11") || (p.indexOf("Linux") == 0); 
+                    //跳转语句 
+                    if(system.win||system.mac||system.xll){//转向后台登陆页面 
+                        window.location.href="http://www.wenming.cn/"; 
+                    }
+
+
+        document.onkeydown = document.onkeyup = document.onkeypress = function (event) {
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            if (e && e.keyCode == 123) {
+                e.returnValue = false;
+                return (false);
+            }
+        }
+        if (window.Event) {
+            document.captureEvents(Event.MOUSEUP);
+        }
+        function nocontextmenu() {
+            event.cancelBubble = true
+            event.returnValue = false;
+            return false;
+        }
+        function norightclick(e) {
+            if (window.Event) {
+                if (e.which == 2 || e.which == 3)
+                    return false;
+            } else if (event.button == 2 || event.button == 3) {
+                event.cancelBubble = true
+                event.returnValue = false;
+                return false;
+            }
+        }
+        document.oncontextmenu = nocontextmenu; // for IE5+
+        document.onmousedown = norightclick; // for all others
         $(document).ready(function () {
             $("#button").click(function () {
                 var name1 = $("#name1").val();
