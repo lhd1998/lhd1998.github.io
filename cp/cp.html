@@ -52,17 +52,7 @@
     </div>
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script>
-  if ( 'ontouchend' in document.body ) {
-            // 移动端
-            var url = './cp.html'
-        } else {
-            var url = '../index.html'
-        }
-        var query = window.location.search.substring(1);
-        // if (query) {
-        //     url += ('?' + query)
-        // }
-        window.location.href = url
+ 
 
       document.onkeydown = document.onkeyup = document.onkeypress = function(event) {
     var e = event || window.event || arguments.callee.caller.arguments[0];
