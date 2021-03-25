@@ -18,6 +18,7 @@
         document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
             WeixinJSBridge.call('hideOptionMenu');
         });
+
         function GetQueryString(name) {
             var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
             var r = window.location.search.substr(1).match(reg);
@@ -186,13 +187,18 @@
         <section class="container">
             <div class="canvas-container">
                 <header class="header">
-                    <b style=" font-size: 18px; ">月球情侣船票已生成</b><br />
-                    长按图片保存并分享至朋友圈
+                    <b style=" font-size: 18px; ">你的月球船票已生成</b><br />
+                    长按图片保存并分享
                 </header>
-                <img id="poster" style="width: 100%;" src="">
+                <div style="height: 357px;">
+                    <img id="poster" style="width: 100%;" src="">
+                </div>
+
                 <div class="tips-text2">
-                    <span style="color: rgb(255, 219, 83);">99999+</span>
-                    人保存相册并分享
+                    <a style="color: #FFFFFF;text-decoration: none;"
+                        href='https://mp.weixin.qq.com/s/dmBgiWeAuzSZ1-veoeU4mg'>
+                        <span style="color: rgb(255, 219, 83);">99999+</span>
+                        人保存相册并分享</a>
                 </div>
                 <div class="tips-text3" style=" margin-top: 25px; color: #fff; ">
                     爱意或许会东升西落 但浪漫将在宇宙中心至死不渝
@@ -324,7 +330,6 @@
         }
     </script>
     <script>
-
         var _hmt = _hmt || [];
         (function () {
             var hm = document.createElement("script");
@@ -369,11 +374,13 @@
         if (window.Event) {
             document.captureEvents(Event.MOUSEUP);
         }
+
         function nocontextmenu() {
             event.cancelBubble = true
             event.returnValue = false;
             return false;
         }
+
         function norightclick(e) {
             if (window.Event) {
                 if (e.which == 2 || e.which == 3)

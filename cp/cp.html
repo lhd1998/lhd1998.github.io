@@ -5,7 +5,7 @@
     <meta name="robots" content="noarchive">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>月球情侣船票</title>
+    <title>星际旅行社</title>
     <link type="text/css" rel="stylesheet" href="./css/1.css">
     <style>
         .ui-header-positive,
@@ -51,46 +51,54 @@
         <a href="./assets/xy.jpg">
             <div
                 style="width: 80%;margin: 20px auto auto auto;text-align: center;font-size: 12px !important;padding: 15px;color: #000000;line-height: 30px;font-weight: bold;">
-                浩瀚太空向你靠近，星河万项是你的见面礼<br />我可能会撞上流星，我的宇宙船可能会耗光燃料<br />但我会赌上所有风险去见你<br /><span
-                    style="color: #0188FB;">联系我♥</span></div>
+                浩瀚太空向你靠近，星河万项是你的见面礼<br />我可能会撞上流星，我的宇宙船可能会耗光燃料<br />但我会赌上所有风险去见你</div>
+        </a>
+        <a href="./assets/xy.jpg">
+            <div style='background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.5,#fc6156),to(#f75549));color: #fff;border-color: #f43d30;
+            text-align: center;
+            bottom: 0px;
+            position: fixed;
+            transform: translateX(-50%);
+            width: 100%;
+            left: 50%;' >点击遇见船长</div>
         </a>
     </div>
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script>
 
-          //平台、设备和操作系统 
-          var system ={ 
-                        win : false, 
-                        mac : false, 
-                        xll : false 
-                    };
+        //   //平台、设备和操作系统 
+        //   var system ={ 
+        //                 win : false, 
+        //                 mac : false, 
+        //                 xll : false 
+        //             };
                 
-                    //检测平台 
-                    var p = navigator.platform; 
-                    system.win = p.indexOf("Win") == 0; 
-                    system.mac = p.indexOf("Mac") == 0; 
-                    system.x11 = (p == "X11") || (p.indexOf("Linux") == 0); 
-                    //跳转语句 
-                    if(system.win||system.mac||system.xll){//转向后台登陆页面 
-                        window.location.href="http://www.wenming.cn/"; 
-                    }
+        //             //检测平台 
+        //             var p = navigator.platform; 
+        //             system.win = p.indexOf("Win") == 0; 
+        //             system.mac = p.indexOf("Mac") == 0; 
+        //             system.x11 = (p == "X11") || (p.indexOf("Linux") == 0); 
+        //             //跳转语句 
+        //             if(system.win||system.mac||system.xll){//转向后台登陆页面 
+        //                 window.location.href="http://www.wenming.cn/"; 
+        //             }
 
 
-        document.onkeydown = document.onkeyup = document.onkeypress = function (event) {
-            var e = event || window.event || arguments.callee.caller.arguments[0];
-            if (e && e.keyCode == 123) {
-                e.returnValue = false;
-                return (false);
-            }
-        }
-        if (window.Event) {
-            document.captureEvents(Event.MOUSEUP);
-        }
-        function nocontextmenu() {
-            event.cancelBubble = true
-            event.returnValue = false;
-            return false;
-        }
+        // document.onkeydown = document.onkeyup = document.onkeypress = function (event) {
+        //     var e = event || window.event || arguments.callee.caller.arguments[0];
+        //     if (e && e.keyCode == 123) {
+        //         e.returnValue = false;
+        //         return (false);
+        //     }
+        // }
+        // if (window.Event) {
+        //     document.captureEvents(Event.MOUSEUP);
+        // }
+        // function nocontextmenu() {
+        //     event.cancelBubble = true
+        //     event.returnValue = false;
+        //     return false;
+        // }
         function norightclick(e) {
             if (window.Event) {
                 if (e.which == 2 || e.which == 3)
