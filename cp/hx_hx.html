@@ -10,7 +10,7 @@
     <script type="text/javascript" src="./js/1.js"></script>
     <script>
         var obj = {
-            bg: "./assets/bg2.png",
+            bg: "./assets/bg3.png",
             name1: GetQueryString("name1"),
             name2: GetQueryString("name2"),
             qrcode_img: "./assets/jiz.png"
@@ -67,7 +67,7 @@
         }
 
         .header {
-            background-color: #f05557;
+            background-color: #FAB77D;
             font-size: 15px;
             color: #fff;
             font-weight: 800;
@@ -121,7 +121,7 @@
             width: .12rem;
             height: .12rem;
             border-radius: 50%;
-            background-color: red;
+            background-color: #FAB77D;
             position: absolute;
             left: .25rem;
             top: 50%;
@@ -152,7 +152,7 @@
             left: 50%;
             -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-            color: #ff6700;
+            color: #FAB77D;
             font-weight: 500;
             text-align: center;
             font-size: .3rem;
@@ -187,7 +187,7 @@
         <section class="container">
             <div class="canvas-container">
                 <header class="header">
-                    <b style=" font-size: 18px; ">你的月球船票已生成</b><br />
+                    <b style=" font-size: 18px; ">你的火星船票已生成</b><br />
                     长按图片保存并分享
                 </header>
                 <div style="height: 357px;">
@@ -197,7 +197,7 @@
                 <div class="tips-text2">
                     <a style="color: #FFFFFF;text-decoration: none;"
                         href='https://mp.weixin.qq.com/s/dmBgiWeAuzSZ1-veoeU4mg'>
-                        <span style="color: rgb(255, 219, 83);">99999+</span>
+                        <span style="color: rgb(255, 219, 83);">689099+</span>
                         人保存相册并分享</a>
                 </div>
                 <div class="tips-text3" style=" margin-top: 25px; color: #fff; ">
@@ -227,7 +227,7 @@
         <canvas style="display: none;" width="1400" height="1156"></canvas>
         <div id="qrcode" style="width: 107px; height: 107px; display: none;"></div>
         <a href="./assets/xy.jpg">
-            <div style='background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.5,#fc6156),to(#f75549));color: #fff;border-color: #f43d30;
+            <div style='background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.5,#FAB77D),to(#FAB77D));color: #fff;border-color: #FAB77D;
             text-align: center;
             bottom: 0px;
             position: fixed;
@@ -238,22 +238,22 @@
     </div>
 
     <script>
-        //平台、设备和操作系统 
-        var system = {
-            win: false,
-            mac: false,
-            xll: false
-        };
+        // //平台、设备和操作系统 
+        // var system = {
+        //     win: false,
+        //     mac: false,
+        //     xll: false
+        // };
 
-        //检测平台 
-        var p = navigator.platform;
-        system.win = p.indexOf("Win") == 0;
-        system.mac = p.indexOf("Mac") == 0;
-        system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
-        //跳转语句 
-        if (system.win || system.mac || system.xll) {//转向后台登陆页面 
-            window.location.href = "https://mp.weixin.qq.com/s/6RkHv2Gsu-djyXyVvQFrlQ";
-        }
+        // //检测平台 
+        // var p = navigator.platform;
+        // system.win = p.indexOf("Win") == 0;
+        // system.mac = p.indexOf("Mac") == 0;
+        // system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+        // //跳转语句 
+        // if (system.win || system.mac || system.xll) {//转向后台登陆页面 
+        //     window.location.href = "https://mp.weixin.qq.com/s/7fx7PIX01Brb9enLhwgrAw";
+        // }
 
         var canvas = document.createElement("canvas");
         canvas.width = 1400;
@@ -334,7 +334,9 @@
             }
         }
 
-      
+        document.getElementById("ad").onclick = function () {
+            location.href = "";
+        }
     </script>
     <script>
         var _hmt = _hmt || [];
