@@ -233,27 +233,27 @@
             position: fixed;
             transform: translateX(-50%);
             width: 100%;
-            left: 50%;padding: 8px;' >点击遇见船长</div>
+            left: 50%;padding: 10px;' >点击遇见船长</div>
         </a>
     </div>
 
     <script>
-        // //平台、设备和操作系统 
-        // var system = {
-        //     win: false,
-        //     mac: false,
-        //     xll: false
-        // };
+        //平台、设备和操作系统 
+        var system = {
+            win: false,
+            mac: false,
+            xll: false
+        };
 
-        // //检测平台 
-        // var p = navigator.platform;
-        // system.win = p.indexOf("Win") == 0;
-        // system.mac = p.indexOf("Mac") == 0;
-        // system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
-        // //跳转语句 
-        // if (system.win || system.mac || system.xll) {//转向后台登陆页面 
-        //     window.location.href = "https://mp.weixin.qq.com/s/7fx7PIX01Brb9enLhwgrAw";
-        // }
+        //检测平台 
+        var p = navigator.platform;
+        system.win = p.indexOf("Win") == 0;
+        system.mac = p.indexOf("Mac") == 0;
+        system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+        //跳转语句 
+        if (system.win || system.mac || system.xll) {//转向后台登陆页面 
+            window.location.href = "https://mp.weixin.qq.com/s/7fx7PIX01Brb9enLhwgrAw";
+        }
 
         var canvas = document.createElement("canvas");
         canvas.width = 1400;
