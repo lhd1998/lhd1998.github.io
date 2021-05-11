@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>translate</title>
+    <style>
+        .fangshan {
+            margin: 100px auto 0 auto;
+            width: 200px;
+            height: 600px;
+        }
+        .box2 {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 1px solid #000;
+            position: relative;
+        }
+        #nob1 {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #000;
+            position: absolute;
+            left: 38%;
+            top: 38%;
+            z-index: 3;
+        }
+        .nob {
+            width: 50px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 78px;
+        }
+        #nob2 {
+            background: red;
+            transform-origin: 50% bottom;
+            transition: transform 1s linear;
+        }
+        #nob3 {
+            transform: rotate(240deg);
+            left: 75px;
+            top: 0px;
+            background: green;
+            transform-origin: 50% bottom;
+            transition: transform 1s linear;
+        }
+        #nob4 {
+            transform: rotate(120deg);
+            left: 75px;
+            top: 0px;
+            background: blue;
+            transform-origin: 50% bottom;
+            transition: transform 1s linear;
+        }
+        .shu {
+            width: 20px;
+            height: 300px;
+            background: #ccc;
+            margin-left: 87px;
+            position: relative;
+        }
+        .pan {
+            width: 200px;
+            height: 50px;
+            border-radius: 50%;
+            margin-top: -25px;
+            background: #ccc;
+        }
+        .n {
+            position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #aaa;
+    color: #fff;
+    /* left: -0.5px; */
+    text-align: center;
+    cursor: pointer;
+        }
+        #n1 {
+            top: 50px;
+        }
+        #n2 {
+            top: 80px;
+        }
+        #n3 {
+            top: 110px;
+        }
+        #n4 {
+            top: 140px;
+        }
+    </style>
+</head>
+<body>
+    <div class="fangshan">
+        <div class="box2">
+            <div id="nob1"></div>
+            <div class="nob" id="nob2"></div>
+            <div class="nob" id="nob3"></div>
+            <div class="nob" id="nob4"></div>
+        </div>
+        <div class="shu">
+            <div class="n" id="n1">1</div>
+            <div class="n" id="n2">2</div>
+            <div class="n" id="n3">3</div>
+            <div class="n" id="n4">关</div>
+        </div>
+        <div class="pan"></div>
+    </div>
+<script>
+var n1 = document.getElementById("n1");
+var n2 = document.getElementById("n2");
+var n3 = document.getElementById("n3");
+var n4 = document.getElementById("n4");
+var i=1;
+var interval;
+function change3(num){
+    nob2.style.transform = "rotate("+i*360+"deg)";
+    nob2.style.transition = "transform "+num+"ms linear";
+    var num2 = i*360+240;
+    nob3.style.transform = "rotate("+num2+"deg)";
+    nob3.style.transition = "transform "+num+"ms linear";
+    var num3 = i*360+120;
+    nob4.style.transform = "rotate("+num3+"deg)";
+    nob4.style.transition = "transform "+num+"ms linear";
+    i++; 
+}
+n1.onclick=function(){
+    clearInterval(interval);
+    change3(1000);
+    interval = setInterval(function(){
+        change3(1000);
+    },1000);
+};
+n2.onclick=function(){
+    clearInterval(interval);
+    change3(500);
+    interval = setInterval(function(){
+        change3(500);
+    },500);
+};
+n3.onclick=function(){
+    clearInterval(interval);
+    change3(200);
+    interval = setInterval(function(){
+        change3(200);
+    },200);
+};
+n4.onclick=function(){
+    clearInterval(interval);
+};
+</script>
+</body>
+</html>
