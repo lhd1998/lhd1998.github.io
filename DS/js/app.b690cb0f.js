@@ -6,6 +6,7 @@ var system = {
     xll: false
 };
 
+
 //检测平台 
 var p = navigator.platform;
 system.win = p.indexOf("Win") == 0;
