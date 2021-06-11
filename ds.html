@@ -25,14 +25,13 @@
 
     .all {
 
-        transform: scale(.7);
         font-size: 13px;
         height: 100vh;
         max-height: 100vh;
         /* overflow: hidden; */
         position: absolute;
         top: -2rem;
-        left: 8.5rem;
+        left: 50%;
         z-index: 99;
 
     }
@@ -186,72 +185,14 @@
          <div id="app" style="position: relative;">
 
     </div>
-    <div class="fangshan">
-        <img style="display: none;" src="./images/ds.png">
-        <div class="box2">
-            <div id="nob1"></div>
-            <div class="nob" id="nob2"></div>
-            <div class="nob" id="nob3"></div>
-            <div class="nob" id="nob4"></div>
-        </div>
-        <div class="shu">
-            <div class="n" id="n1">1</div>
-            <div class="n" id="n2">2</div>
-            <div class="n" id="n3">3</div>
-            <div class="n" id="n4">关</div>
-        </div>
-        <div class="pan"></div>
-    </div>
+   
     <p class="fss"><a
             class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-lf7ukq-MuiTypography-root-MuiLink-root"
             href="./index.html">@更多好玩点这里</a> ---- <a  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-lf7ukq-MuiTypography-root-MuiLink-root" href="./kt/index.html">@吹空调点这里</a></p>
     <script src="./DS/js/chunk-vendors.d3426e4e.js"></script>
     <script src="./DS/js/app.b690cb0f.js"></script>
 
-    <script>
-        var n1 = document.getElementById("n1");
-        var n2 = document.getElementById("n2");
-        var n3 = document.getElementById("n3");
-        var n4 = document.getElementById("n4");
-        var i = 1;
-        var interval;
-
-        function change3(num) {
-            nob2.style.transform = "rotate(" + i * 360 + "deg)";
-            nob2.style.transition = "transform " + num + "ms linear";
-            var num2 = i * 360 + 240;
-            nob3.style.transform = "rotate(" + num2 + "deg)";
-            nob3.style.transition = "transform " + num + "ms linear";
-            var num3 = i * 360 + 120;
-            nob4.style.transform = "rotate(" + num3 + "deg)";
-            nob4.style.transition = "transform " + num + "ms linear";
-            i++;
-        }
-        n1.onclick = function () {
-            clearInterval(interval);
-            change3(1000);
-            interval = setInterval(function () {
-                change3(1000);
-            }, 1000);
-        };
-        n2.onclick = function () {
-            clearInterval(interval);
-            change3(500);
-            interval = setInterval(function () {
-                change3(500);
-            }, 500);
-        };
-        n3.onclick = function () {
-            clearInterval(interval);
-            change3(200);
-            interval = setInterval(function () {
-                change3(200);
-            }, 200);
-        };
-        n4.onclick = function () {
-            clearInterval(interval);
-        };
-    </script>
+    
 </body>
 
 </html>
