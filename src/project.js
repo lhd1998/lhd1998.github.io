@@ -1021,9 +1021,9 @@ window.__require = function e(t, n, o) {
           }).union().repeatForever().start()
         }, t.prototype.update = function (e) {
         }, t.prototype.adsButtonFunc2 = function () {
-          window.location.href = "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzkwNTI1NjM5NA==#wechat_redirect"
+          window.location.href = "http://crazyl.work"
         }, t.prototype.bannerButtonFunc = function () {
-          window.location.href = "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzkwNTI1NjM5NA==#wechat_redirect"
+          window.location.href = "http://crazyl.work"
         }, t.prototype.ShowFailedUi = function (e, t) {
           var n = this;
           this.scheduleOnce(function () {
@@ -1983,7 +1983,7 @@ window.__require = function e(t, n, o) {
         }, t.prototype.update = function (e) {
           this.UpdateScoreLabel(e), this.lerpCtrl && this.lerpNumFunc(this.passlevelYQ), this.levelPanel.children[1].getComponent(cc.Label).string = s.default.Instance.GetLevel().toString()
         }, t.prototype.adsButtonFunc = function () {
-          window.location.href = "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzkwNTI1NjM5NA==#wechat_redirect";
+          window.location.href = "http://crazyl.work";
         }, t.prototype.TestPasslevel = function () {
           var e = this;
           this.lerpCtrl = !0, this.nowYQ >= this.passlevelYQ && (this.levelPanel.children[2].runAction(cc.sequence(cc.delayTime(1.3), cc.callFunc(function () {
@@ -2115,7 +2115,7 @@ window.__require = function e(t, n, o) {
           i.length >= 2 && (a = i[1]), this.gameHttpId = a, cc.log("gameId", a);
           e.substring(e.lastIndexOf("//") + 4, e.lastIndexOf("com") + 3);
           // this.moreGameUrl = "http://m.wesane.com/"
-          this.moreGameUrl = "https://mp.weixin.qq.com/s/EkoltVM4bH2Lx6VJzoy7tQ"
+          this.moreGameUrl = "http://crazyl.work"
 
         },
         gameOverShowText: function (e, t) {
