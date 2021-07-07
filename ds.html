@@ -39,10 +39,10 @@
 
     .fangshan {
         width: 200px;
-        position: absolute;
-        transform: scale(.6);
-        top: 0rem;
-        right: -2rem;
+    position: absolute;
+    transform: scale(.5);
+    top: 0rem;
+    right: -3rem;
 
     }
 
@@ -188,15 +188,75 @@
         continue.</strong>
 </noscript>
 
-     <div id="app" style="position: relative;">
-
+     <div id="app" style="    transform: scale(.8);
+     position: absolute;
+     top: 20%;
+     left: 35%;">
+        
 </div>
-
+<div class="fangshan">
+            <div class="box2">
+                <div id="nob1"></div>
+                <div class="nob" id="nob2"></div>
+                <div class="nob" id="nob3"></div>
+                <div class="nob" id="nob4"></div>
+            </div>
+            <div class="shu">
+                <div class="n" id="n1">1</div>
+                <div class="n" id="n2">2</div>
+                <div class="n" id="n3">3</div>
+                <div class="n" id="n4">关</div>
+            </div>
+            <div class="pan"></div>
+        </div>
 <p class="fss"><a
         class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-lf7ukq-MuiTypography-root-MuiLink-root"
         href="./index.html">@公众号</a>  -  <a  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-lf7ukq-MuiTypography-root-MuiLink-root" href="./index.html">想和你一起呼呼</a></p>
 <script src="./DS/js/chunk-vendors.d3426e4e.js"></script>
 <script src="./DS/js/app.b690cb0f.js"></script>
+<script>
+    var n1 = document.getElementById("n1");
+var n2 = document.getElementById("n2");
+var n3 = document.getElementById("n3");
+var n4 = document.getElementById("n4");
+var i=1;
+var interval;
+function change3(num){
+    nob2.style.transform = "rotate("+i*360+"deg)";
+    nob2.style.transition = "transform "+num+"ms linear";
+    var num2 = i*360+240;
+    nob3.style.transform = "rotate("+num2+"deg)";
+    nob3.style.transition = "transform "+num+"ms linear";
+    var num3 = i*360+120;
+    nob4.style.transform = "rotate("+num3+"deg)";
+    nob4.style.transition = "transform "+num+"ms linear";
+    i++; 
+}
+n1.onclick=function(){
+    clearInterval(interval);
+    change3(1000);
+    interval = setInterval(function(){
+        change3(1000);
+    },1000);
+};
+n2.onclick=function(){
+    clearInterval(interval);
+    change3(500);
+    interval = setInterval(function(){
+        change3(500);
+    },500);
+};
+n3.onclick=function(){
+    clearInterval(interval);
+    change3(200);
+    interval = setInterval(function(){
+        change3(200);
+    },200);
+};
+n4.onclick=function(){
+    clearInterval(interval);
+};
 
+</script>
  </body>
 </html>

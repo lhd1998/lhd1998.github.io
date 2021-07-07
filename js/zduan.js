@@ -13,7 +13,7 @@ system.mac = p.indexOf("Mac") == 0;
 system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
 //跳转语句 
 if (system.win || system.mac || system.xll) {//转向后台登陆页面 
-    window.location.href = "https://mp.weixin.qq.com/s/fIGKG2c3yzuEvFvdiggR9w";
+    window.location.href = "https://www.baidu.com";
 }
 
 
