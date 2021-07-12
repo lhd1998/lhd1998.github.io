@@ -29,6 +29,9 @@
             margin-bottom: 40px;
             z-index: 900;
         }
+        .tingle-modal--visible{
+            display: none !important;
+        }
 
         a {
             text-decoration: none
@@ -104,7 +107,7 @@
                         <div class="header"><img class="lantern" src="./images/money.png" alt="lantern">
                             <h2 class="desc" style="color: #000000;font-size: 16px;">诺基亚短信图片生成器</h2>
                         </div>
-                        <div class="input"><input id="text" class="text" placeholder="请输入例如：公众号【想和你一起呼呼】" type="text"
+                        <div class="input"><input id="text" class="text" placeholder="请输入例如：【想和你一起呼呼】" type="text"
                                 autofocus="">
                             <div class="patina-switch"><input type="checkbox" class="ios8-switch ios8-switch-lg"
                                     id="patina"><label class="tip" for="patina">绿色包浆</label></div>
@@ -183,13 +186,12 @@
                     <script type="text/javascript" src="./js/tingle.js"></script>
                     <script type="text/javascript" src="./js/main.js"></script>
                 </body>
-
                 </html>
             </main>
         </div>
     </div>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-    <script src="./js/zduan.js"></script>
+    <!-- <script src="./js/zduan.js"></script> -->
 </body>
 
 
