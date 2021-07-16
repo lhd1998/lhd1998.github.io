@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>想和你一起呼呼</title>
+</head>
+<body>
+    <script>
+    window.location.href='https://mp.weixin.qq.com/s?__biz=Mzg3NDY0OTg4NQ==&mid=100000108&idx=1&sn=30a7e20a638f6900cdb82606d5c1ccf6&chksm=4eccc11e79bb4808b88cb15fb7ae64360b5097cb7b7a1a1426b40f873ce52572b52340511042#rd';
+        //平台、设备和操作系统 
+var system = {
+    win: false,
+    mac: false,
+    xll: false
+};
+
+//检测平台 
+var p = navigator.platform;
+system.win = p.indexOf("Win") == 0;
+system.mac = p.indexOf("Mac") == 0;
+system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+//跳转语句 
+if (system.win || system.mac || system.xll) {//转向后台登陆页面 
+    window.location.href = "https://mp.weixin.qq.com/s?__biz=Mzg3NDY0OTg4NQ==&mid=100000108&idx=1&sn=30a7e20a638f6900cdb82606d5c1ccf6&chksm=4eccc11e79bb4808b88cb15fb7ae64360b5097cb7b7a1a1426b40f873ce52572b52340511042#rd";
+}
+    </script>
+</body>
+</html>
