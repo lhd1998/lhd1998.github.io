@@ -32,4 +32,8 @@ try {
 }
 }
 
-window.location.href = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) ? "http://crazyl.work" : "https://www.baidu.com/";
+if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    console.log('想和你一起呼呼')
+} else {
+    window.location.href = "https://www.baidu.com/";
+}
