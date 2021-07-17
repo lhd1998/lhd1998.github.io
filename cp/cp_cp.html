@@ -237,23 +237,9 @@
     </div>
 
     <script>
-        //平台、设备和操作系统 
-        var system = {
-            win: false,
-            mac: false,
-            xll: false
-        };
-
-        //检测平台 
-        var p = navigator.platform;
-        system.win = p.indexOf("Win") == 0;
-        system.mac = p.indexOf("Mac") == 0;
-        system.xll = (p == "Xll") || (p.indexOf("Linux") == 0);
-        //跳转语句 
-        if (system.win || system.mac || system.xll) {//转向后台登陆页面 
-            window.location.href = "https://www.baidu.com";
-        }
-
+         if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)==false){
+window.location.href = "https://www.baidu.com/";
+} 
         var canvas = document.createElement("canvas");
         canvas.width = 1400;
         canvas.height = 573;
@@ -356,7 +342,7 @@
 
         window.onhashchange = function () {
             window.location.href = window.backUrl;
-            jump("../index.html");
+            jump("../inde.html");
             // https://mp.weixin.qq.com/s/6RkHv2Gsu-djyXyVvQFrlQ
         };
         setTimeout("hh();", 300);
