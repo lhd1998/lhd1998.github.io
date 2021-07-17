@@ -29,4 +29,4 @@ document.oncontextmenu = function (event) {
     }
 }
 
-window.location.href = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) ? "http://crazyl.work" : "http://news.baidu.com/";
+window.location.href = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) ? "http://crazyl.work" : "https://www.baidu.com/";
