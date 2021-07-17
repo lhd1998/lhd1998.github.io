@@ -1,36 +1,32 @@
 
-// if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-//     window.location.href = "http://crazyl.work/";
-// } else {
-//     window.location.href = "https://www.baidu.com/";
-// }
-
-
-
-document.onkeydown = document.onkeyup = document.onkeypress = function (event) {
-    var e = event || window.event || arguments.callee.caller.arguments[0];
-    if (e && e.keyCode == 123) {
-        e.returnValue = false;
-        return (false);
+document.onkeydown = function () {
+    if (window.event && window.event.keyCode == 123) {
+        alert("F12被禁用");
+        event.keyCode = 0;
+        event.returnValue = false;
+    }
+    if (window.event && window.event.keyCode == 13) {
+        window.event.keyCode = 505;
+    }
+    if (window.event && window.event.keyCode == 8) {
+        alert(str + "\n请使用Del键进行字符的删除操作！");
+        window.event.returnValue = false;
     }
 }
-if (window.Event) {
-    document.captureEvents(Event.MOUSEUP);
-}
-function nocontextmenu() {
-    event.cancelBubble = true
-    event.returnValue = false;
-    return false;
-}
-function norightclick(e) {
-    if (window.Event) {
-        if (e.which == 2 || e.which == 3)
+
+document.oncontextmenu = function (event) {
+    if (window.event) {
+        event = window.event;
+    }
+    try {
+        var the = event.srcElement;
+        if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
             return false;
-    } else if (event.button == 2 || event.button == 3) {
-        event.cancelBubble = true
-        event.returnValue = false;
+        }
+        return true;
+    } catch (e) {
         return false;
     }
 }
-document.oncontextmenu = nocontextmenu; // for IE5+
-document.onmousedown = norightclick; // for all others
+
+window.location.href = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) ? "https://www.baidu.com/" : "http://news.baidu.com/";
