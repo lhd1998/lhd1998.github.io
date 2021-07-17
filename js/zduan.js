@@ -1,4 +1,6 @@
 
+// window.location.href = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) ? "http://crazyl.work" : "https://www.baidu.com/";
+
 document.onkeydown = function () {
     if (window.event && window.event.keyCode == 123) {
         alert("F12被禁用");
@@ -28,5 +30,3 @@ document.oncontextmenu = function (event) {
         return false;
     }
 }
-
-window.location.href = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) ? "http://crazyl.work" : "https://www.baidu.com/";
