@@ -32,8 +32,6 @@ try {
 }
 }
 
-if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-    console.log('想和你一起呼呼')
-} else {
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)==false){
     window.location.href = "https://www.baidu.com/";
-}
+} 

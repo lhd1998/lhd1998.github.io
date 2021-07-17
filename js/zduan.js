@@ -1,4 +1,6 @@
-
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)==false){
+    window.location.href = "https://www.baidu.com/";
+} 
 
 document.onkeydown = function () {
     if (window.event && window.event.keyCode == 123) {
