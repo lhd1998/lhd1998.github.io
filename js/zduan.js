@@ -1,5 +1,4 @@
-
-// window.location.href = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) ? "http://crazyl.work" : "https://www.baidu.com/";
+window.location.href = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) ? "./index.html" : "https://www.baidu.com/";
 
 document.onkeydown = function () {
     if (window.event && window.event.keyCode == 123) {
