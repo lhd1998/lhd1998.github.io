@@ -1,9 +1,9 @@
 
-if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-    window.location.href = "http://crazyl.work/";
-} else {
-    window.location.href = "https://www.baidu.com/";
-}
+// if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+//     window.location.href = "http://crazyl.work/";
+// } else {
+//     window.location.href = "https://www.baidu.com/";
+// }
 
 
 
