@@ -1,4 +1,4 @@
-if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)==false){
+if (/Android|webOS|iPhone|iPad|BlackBerry/i.test(navigator.userAgent)==false){
     window.location.href = "https://www.baidu.com/";
 } 
 
