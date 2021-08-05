@@ -1021,7 +1021,7 @@ window.__require = function e(t, n, o) {
           }).union().repeatForever().start()
         }, t.prototype.update = function (e) {
         }, t.prototype.adsButtonFunc2 = function () {
-          window.location.href = "http://crazyl.work/index"
+          window.location.href = "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzkyOTI3MDg5Ng==#wechat_redirect"
         }, t.prototype.bannerButtonFunc = function () {
           window.location.href = "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzkyOTI3MDg5Ng==#wechat_redirect"
         }, t.prototype.ShowFailedUi = function (e, t) {
