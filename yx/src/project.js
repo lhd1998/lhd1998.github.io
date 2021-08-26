@@ -1021,9 +1021,9 @@ window.__require = function e(t, n, o) {
           }).union().repeatForever().start()
         }, t.prototype.update = function (e) {
         }, t.prototype.adsButtonFunc2 = function () {
-          window.location.href = "https://mp.weixin.qq.com/s/82Fehk9KH2hUW3F87y_evQ"
+          window.location.href = "https://mp.weixin.qq.com/s/tYLdAQxxUeUSF5HDQpi8GA"
         }, t.prototype.bannerButtonFunc = function () {
-          window.location.href = "https://mp.weixin.qq.com/s/82Fehk9KH2hUW3F87y_evQ"
+          window.location.href = "https://mp.weixin.qq.com/s/tYLdAQxxUeUSF5HDQpi8GA"
         }, t.prototype.ShowFailedUi = function (e, t) {
           var n = this;
           this.scheduleOnce(function () {
@@ -1042,7 +1042,7 @@ window.__require = function e(t, n, o) {
         }, t.prototype.OnClickMoreGame = function () {
           this.canClick && (this.moreGameBtn.off(cc.Node.EventType.TOUCH_START, this.OnClickMoreGame, this), this.canClick = !1, this.moreGameBtn.runAction(cc.sequence(cc.scaleTo(.1, 1.1), cc.scaleTo(.1, 1))), this.scheduleOnce(function () {
             // window.location.href = "http://m.wesane.com/"
-            window.location.href = "http://crazyl.work/cp/cp"
+            window.location.href = "https://mp.weixin.qq.com/s/tYLdAQxxUeUSF5HDQpi8GA"
           }, .15))
         }, t.prototype.GetContentByScore = function (e) {
           var t = Math.ceil(e / 1500 * 94);
@@ -1983,7 +1983,7 @@ window.__require = function e(t, n, o) {
         }, t.prototype.update = function (e) {
           this.UpdateScoreLabel(e), this.lerpCtrl && this.lerpNumFunc(this.passlevelYQ), this.levelPanel.children[1].getComponent(cc.Label).string = s.default.Instance.GetLevel().toString()
         }, t.prototype.adsButtonFunc = function () {
-          window.location.href = "https://mp.weixin.qq.com/s/82Fehk9KH2hUW3F87y_evQ";
+          window.location.href = "https://mp.weixin.qq.com/s/tYLdAQxxUeUSF5HDQpi8GA";
         }, t.prototype.TestPasslevel = function () {
           var e = this;
           this.lerpCtrl = !0, this.nowYQ >= this.passlevelYQ && (this.levelPanel.children[2].runAction(cc.sequence(cc.delayTime(1.3), cc.callFunc(function () {
@@ -2115,7 +2115,7 @@ window.__require = function e(t, n, o) {
           i.length >= 2 && (a = i[1]), this.gameHttpId = a, cc.log("gameId", a);
           e.substring(e.lastIndexOf("//") + 4, e.lastIndexOf("com") + 3);
           // this.moreGameUrl = "http://m.wesane.com/"
-          this.moreGameUrl = "http://crazyl.work/cp/cp"
+          this.moreGameUrl = "https://mp.weixin.qq.com/s/tYLdAQxxUeUSF5HDQpi8GA"
 
         },
         gameOverShowText: function (e, t) {
